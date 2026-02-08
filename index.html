@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body>
+<nav>
+    <ul>
+    <li><img src="assets/images/logo.svg" alt="logo"></li>
+    <li><a class="hideOnMobile" href="#">Home</a></li>
+    <li><a class="hideOnMobile" href="#">New</a></li>
+    <li><a class="hideOnMobile" href="#">Popular</a></li>
+    <li><a class="hideOnMobile" href="#">Trending</a></li>
+    <li><a class="hideOnMobile" href="#">Categories</a></li>
+    <li><img class="menu-button" onclick="showSidebar()" src="assets/images/icon-menu.svg" alt="menu-icon"></li>
+  </ul>
+  <ul class="sidebar">
+    <li class="closeIconList"><img class="closeIcon" onclick="hideSidebar()" src="assets/images/icon-menu-close.svg" alt="close-icon"></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">New</a></li>
+    <li><a href="#">Popular</a></li>
+    <li><a href="#">Trending</a></li>
+    <li><a href="#">Categories</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <section class="leftside">
+    <div class="main-poster">
+    <img class="mainPosterImg" src="assets/images/image-web-3-desktop.jpg" alt="mainPoster">
+    </div>
+    <div class="title">
+      <h1 class="main-title">
+       The Bright Future of Web 3.0?
+      </h1> 
+      <div class="description">
+       <p> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+           But is it really fulfilling its promise?</p>
+       <button>Read More</button>
+      </div>
+    </div>
+
+  </section>
+  <aside class="rightside">
+   <h1>New</h1>
+
+   <h2>Hydrogen VS Electric Cars</h2>
+   <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
+   <hr>
+
+   <h2>  The Downsides of AI Artistry</h2>
+   <p>   What are the possible adverse effects of on-demand AI image generation?</p>
+   <hr>
+   
+   <h2>  Is VC Funding Drying Up?</h2>
+   <p>   Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+  </aside>
+</main>
+<div class="articles">
+  <article class="card">
+    <img src="assets/images/image-retro-pcs.jpg" alt="retro">
+    <div class="img-info">
+      <span>01</span>
+      <h4>  Reviving Retro PCs</h4>
+      <p>  What happens when old PCs are given modern upgrades?</p>
+    </div>
+  </article>
+    <article class="card">
+    <img src="assets/images/image-top-laptops.jpg" alt="laptops">
+    <div class="img-info">
+      <span>02</span>
+      <h4>Top 10 Laptops of 2022</h4>
+      <p> Our best picks for various needs and budgets.</p>
+    </div>
+  </article>
+    <article class="card">
+    <img src="assets/images/image-gaming-growth.jpg" alt="gaming">
+    <div class="img-info">
+      <span>03</span>
+      <h4>The Growth of Gaming</h4>
+      <p>How the pandemic has sparked fresh opportunities.</p>
+    </div>
+  </article>
+</div>
+
+  <script>
+    function showSidebar(){
+     const sidebar = document.querySelector('.sidebar');
+     sidebar.style.display='flex';
+    }
+
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display='none';
+    }
+  </script>
+</body>
+</html>

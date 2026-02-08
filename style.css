@@ -1,0 +1,267 @@
+ .attribution { font-size: 11px; text-align: center; }
+ .attribution a { color: hsl(228, 45%, 44%); }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ *{
+   margin: 0;
+   padding: 0;
+ }
+
+ body{
+   background-color:  hsl(36, 100%, 99%);
+   min-height: 100vh;
+   font-family: 'Inter';
+   padding: 2rem 6rem;
+
+ }
+
+ nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 3rem;
+ }
+
+ nav li{
+   height: 50px;
+   display: flex;
+    align-items: center;
+ }
+
+ nav a{
+   color: hsl(236, 13%, 42%);
+   height: 100%;
+   padding: 0 24px;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+
+   
+ }
+
+ nav a:hover{
+   color: hsl(5, 85%, 63%);
+ }
+
+ nav li:first-child{
+   margin-right:auto ;
+ }
+
+ .sidebar{
+   position: fixed;
+   top: 0;
+   right: 0;
+   background-color:hsl(36, 100%, 99%);
+   height: 100vh;
+   flex-direction: column;
+   justify-content:flex-start;
+   align-items:flex-start ;
+   z-index: 999;
+   padding: 22px;
+   width: 250px;
+   background-color:  hsl(36, 100%, 99%);
+   display: none;
+   box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+
+ }
+ .closeIconList{
+   display: flex;
+   justify-content: flex-end;
+   padding-bottom:50px ;
+   padding-top: 10px;
+ }
+ .closeIcon{
+   width:25px;
+   height: 25px;
+ }
+
+ .sidebar li, .sidebar a{
+   width:100%;
+   color: rgb(35, 35, 35);
+ }
+ .menu-button{
+  margin-left: auto;
+   display: none;
+ }
+.sidebar::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 250px);
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+@media (max-width: 790px ){
+   .hideOnMobile{
+      display: none;
+   }
+   .menu-button{
+      display:block;
+   }
+   body{
+       padding: 1rem;
+   }
+   .container{
+    grid-template-columns: 1fr !important;
+   }
+   .leftside{
+   width: 100%;
+
+   }
+   .rightside{
+    width: 100%;
+    padding: 1rem;
+   }
+   .title{
+    grid-template-columns: 1fr!important;
+    margin: 1rem 0 !important;
+    gap:0rem !important;
+    text-align: left;
+   }
+   .description{
+    font-size: 0.95rem;
+   }
+   .card{
+    flex-direction: row;
+    align-items: center;
+   }
+   .card img{
+    width: 80px;
+    height: auto;
+   }
+   
+   .articles{
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+   }
+   .mainPosterImg {
+    content: url("assets/images/image-web-3-mobile.jpg");
+  }
+}
+
+.container{
+  width:100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+
+}
+
+.leftside{
+  width: auto;
+}
+.rightside{
+  width: auto;
+  padding: 16px;
+
+  background-color:hsl(240, 100%, 5%) ;
+}
+
+.mainPosterImg{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.title{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 1.5rem;
+}
+
+.main-title{
+  font-size: 3.7rem;
+
+}
+
+.description{
+  color: hsl(236, 13%, 42%);
+  padding-top: 12px;
+  /* padding-left: 100px; */
+}
+
+.description button{
+  background-color: hsl(5, 85%, 63%);
+  color:hsl(240, 100%, 5%) ;
+  font-weight:600;
+  font-family: 'inter';
+  border: none;
+  padding: 12px 32px;
+  margin-top: 32px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.description button:hover{
+  background-color:hsl(240, 100%, 5%) ;
+  color: white;
+}
+
+.rightside h1{
+  color:  hsl(35, 77%, 62%);
+  margin-bottom: 24px;
+}
+
+.rightside h2{
+  color:  white;
+}
+.rightside h2:hover{
+  color:  hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.rightside p{
+  color: hsl(236, 13%, 42%);
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.rightside hr{
+  margin:25px 0px;
+  color: hsl(236, 13%, 42%);
+}
+
+.articles{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:2rem;
+  margin-top:3rem ;
+}
+
+.card{
+  display: flex;
+  gap: 1rem;
+}
+
+.card img{
+  width: 100px;
+}
+
+.card span{
+  color: hsl(5, 85%, 63%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card h4{
+  margin: 1rem 0;
+}
+
+.card h4:hover{
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+
+.card p{
+  color: hsl(236, 13%, 42%);
+}
+
